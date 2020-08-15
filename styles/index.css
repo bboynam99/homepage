@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .display-name {
-  font-size: clamp(20px, 25vw, 250px);
+  font-size: clamp(20px, 20vw, 250px);
   background-clip: text;
   color: rgba(0, 0, 0, 0.1);
   @apply bg-gradient-r-brand;
