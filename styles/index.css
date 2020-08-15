@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.display-name {
+  font-size: clamp(20px, 25vw, 250px);
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.1);
+  @apply bg-gradient-r-brand;
+  background-size: 400% 400%;
+  animation: BackgroundGradient 4s ease infinite;
+}
+
+@keyframes BackgroundGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
