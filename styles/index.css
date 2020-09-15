@@ -1,24 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;700&family=Quicksand:wght@400;500;700&family=Unica+One&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.display-name {
-  font-size: clamp(20px, 20vw, 250px);
-  background-clip: text;
-  color: rgba(0, 0, 0, 0.1);
-  @apply bg-gradient-r-brand;
-  background-size: 400% 400%;
-  animation: BackgroundGradient 4s ease infinite;
-}
-
-@keyframes BackgroundGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.h-screen-section {
+  @apply h-screen;
+  min-height: 720px;
 }
