@@ -21,22 +21,25 @@ export default function Home() {
           }}
         >
           <div className="max-w-screen-lg w-full">
-            <h2
-              className="font-bold"
-              style={{ fontSize: "clamp(16px, 6vw, 60px)" }}
-            >
-              DeFi for everyone.
-            </h2>
-            <h3 className="text-lg mb-16">
-              Sailfish is your gateway to open financial services. With friends.
-            </h3>
+            <div className="w-1/2">
+              <h2
+                className="font-bold"
+                style={{ fontSize: "clamp(1.5rem, 6vw, 60px)" }}
+              >
+                DeFi for everyone
+              </h2>
+              <h3 className="text-lg mb-16">
+                Sailfish is the gateway to open financial services for you and
+                your friends
+              </h3>
 
-            <a
-              className="bg-sf-teal rounded-full px-6 py-4 text-sf-dark font-semibold shadow-xl"
-              href={APP_URL}
-            >
-              Go to App
-            </a>
+              <a
+                className="bg-sf-teal rounded-full px-6 py-4 text-sf-dark font-semibold shadow-xl hover:bg-white transition-colors duration-200"
+                href={APP_URL}
+              >
+                Go to App
+              </a>
+            </div>
           </div>
         </div>
       </main>
@@ -127,7 +130,11 @@ export default function Home() {
           style={{ width: "45vw" }}
         >
           {Array.from({ length: 6 }, (_, i) => (
-            <img key={i} src={`/grid${i + 1}.png`} />
+            <img
+              key={i}
+              className="pointer-events-none"
+              src={`/grid${i + 1}.png`}
+            />
           ))}
         </div>
       </section>
@@ -138,7 +145,7 @@ export default function Home() {
           <div className="w-full max-w-screen-lg">
             <div className="grid grid-cols-6">
               <div className="col-span-3">
-                <div className="flex">
+                <div className="flex items-center">
                   <img
                     className="w-10"
                     src="/sailfish.svg"
