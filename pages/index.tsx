@@ -178,6 +178,13 @@ export default function Home() {
                     fixedWidth
                   />
                 </a>
+                <a href="https://discord.gg/7Wbqucc" className="mr-2">
+                  <FontAwesomeIcon
+                    icon={["fab", "discord"]}
+                    size="sm"
+                    fixedWidth
+                  />
+                </a>
                 <a href="https://github.com/sailfish-app" className="mr-2">
                   <FontAwesomeIcon
                     icon={["fab", "github"]}
