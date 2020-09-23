@@ -2,7 +2,7 @@ import classnames from "classnames";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export const APP_URL = "/";
+export const APP_URL = "https://app.sailfish.app";
 
 export default function Nav() {
   const [showBg, setShowBg] = useState(false);
@@ -33,8 +33,11 @@ export default function Nav() {
         <li>
           <Link href="/">
             <a className="flex items-center">
-              <img className="w-10" src="/sailfish.svg" alt="Sailfish"></img>
-              <h1 className="ml-2 font-logo text-2xl text-white">Sailfish</h1>
+              <img
+                className="h-10"
+                src="/sailfish_logo_light.svg"
+                alt="Sailfish"
+              ></img>
             </a>
           </Link>
         </li>

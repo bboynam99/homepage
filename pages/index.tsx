@@ -156,39 +156,71 @@ export default function Home() {
                   </h1>
                 </div>
               </div>
-              <ul className="col-span-3">
+              <ul className="col-span-1">
+                <li className="mt-2 mb-4 font-bold text-gray-400">Company</li>
                 <li className="my-2">
                   <Link href="/about">
                     <a>About</a>
                   </Link>
                 </li>
+              </ul>
+              <ul className="col-span-2">
+                <li className="mt-2 mb-4 font-bold text-gray-400">Sailfish</li>
                 <li className="my-2">
                   <Link href="/faq">
                     <a>FAQ</a>
+                  </Link>
+                </li>
+                <li className="my-2">
+                  <Link href="https://docs.sailfish.app/">
+                    <a>Docs</a>
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="mt-16 flex items-center justify-between border-t border-gray-400 pt-8">
               <div>
-                <a href="https://twitter.com/Sailfishapp" className="mr-2">
+                <a
+                  target="_blank"
+                  href="https://twitter.com/Sailfishapp"
+                  className="mr-2"
+                >
                   <FontAwesomeIcon
                     icon={["fab", "twitter"]}
-                    size="sm"
+                    size="1x"
                     fixedWidth
                   />
                 </a>
-                <a href="https://discord.gg/7Wbqucc" className="mr-2">
+                <a
+                  target="_blank"
+                  href="https://medium.com/@sailfishapp"
+                  className="mr-2"
+                >
+                  <FontAwesomeIcon
+                    icon={["fab", "medium"]}
+                    size="1x"
+                    fixedWidth
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://discord.gg/7Wbqucc"
+                  className="mr-2"
+                >
                   <FontAwesomeIcon
                     icon={["fab", "discord"]}
-                    size="sm"
+                    size="1x"
                     fixedWidth
                   />
                 </a>
-                <a href="https://github.com/sailfish-app" className="mr-2">
+                <a
+                  target="_blank"
+                  href="https://github.com/sailfish-app"
+                  className="mr-2"
+                >
                   <FontAwesomeIcon
                     icon={["fab", "github"]}
-                    size="sm"
+                    size="1x"
                     fixedWidth
                   />
                 </a>
