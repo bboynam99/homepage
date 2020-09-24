@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -12,7 +14,7 @@ module.exports = {
         "sf-footer-blue": "#0644FF",
       },
       fontFamily: {
-        logo: ["Unica One"],
+        sans: ["Aestetico", ...defaultTheme.fontFamily.sans],
       },
     },
   },

@@ -35,7 +35,7 @@ export default function Nav() {
             <a className="flex items-center">
               <img
                 className="h-10"
-                src="/sailfish_logo_light.svg"
+                src="/img/sailfish_logo_light.svg"
                 alt="Sailfish"
               ></img>
             </a>

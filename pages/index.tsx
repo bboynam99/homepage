@@ -8,7 +8,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Head>
         <title>Sailfish</title>
-        <link rel="icon" href="/sailfish.svg" />
+        <link rel="icon" href="/img/sailfish.svg" />
       </Head>
 
       <Nav />
@@ -17,7 +17,7 @@ export default function Home() {
         <div
           className="w-full h-full flex flex-col justify-center items-center"
           style={{
-            background: 'url("/hero.png") no-repeat top right/50%',
+            background: 'url("/img/hero.png") no-repeat top right/50%',
           }}
         >
           <div className="max-w-screen-lg w-full">
@@ -69,7 +69,8 @@ export default function Home() {
             <div
               className="h-full w-full absolute inset-y-0 -ml-8"
               style={{
-                background: 'url("/section2.png") no-repeat center left /55%',
+                background:
+                  'url("/img/section2.png") no-repeat center left /55%',
               }}
             />
           </div>
@@ -81,14 +82,16 @@ export default function Home() {
           <div
             className="h-full w-full"
             style={{
-              background: 'url("/section3.png") no-repeat center center/62.5%',
+              background:
+                'url("/img/section3.png") no-repeat center center/62.5%',
             }}
           />
         </div>
         <div
           className="w-1/2 flex flex-col justify-center"
           style={{
-            background: 'url("/section3_right.png") no-repeat center center',
+            background:
+              'url("/img/section3_right.png") no-repeat center center',
           }}
         >
           <div
@@ -133,27 +136,27 @@ export default function Home() {
             <img
               key={i}
               className="pointer-events-none"
-              src={`/grid${i + 1}.png`}
+              src={`/img/grid${i + 1}.png`}
             />
           ))}
         </div>
       </section>
 
       <footer>
-        <img src="/footer.svg" className="w-full pointer-events-none -mb-1" />
+        <img
+          src="/img/footer.svg"
+          className="w-full pointer-events-none -mb-1"
+        />
         <div className="flex flex-col items-center w-full bg-sf-footer-blue py-8 text-white">
           <div className="w-full max-w-screen-lg">
             <div className="grid grid-cols-6">
-              <div className="col-span-3">
+              <div className="col-span-1">
                 <div className="flex items-center">
                   <img
                     className="w-10"
-                    src="/sailfish.svg"
+                    src="/img/sailfish.svg"
                     alt="Sailfish"
                   ></img>
-                  <h1 className="ml-2 font-logo text-2xl text-white">
-                    Sailfish
-                  </h1>
                 </div>
               </div>
               <ul className="col-span-1">
@@ -164,7 +167,7 @@ export default function Home() {
                   </Link>
                 </li>
               </ul>
-              <ul className="col-span-2">
+              <ul className="col-span-4">
                 <li className="mt-2 mb-4 font-bold text-gray-400">Sailfish</li>
                 <li className="my-2">
                   <Link href="/faq">
