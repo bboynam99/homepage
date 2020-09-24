@@ -17,6 +17,18 @@
 }
 
 .h-screen-section {
-  @apply h-screen;
-  min-height: 720px;
+  min-height: 360px;
+}
+
+@screen md {
+  .h-screen-section {
+    @apply h-screen;
+    min-height: 720px;
+  }
+}
+
+@screen sm {
+  .w-45vw {
+    width: 45vw;
+  }
 }

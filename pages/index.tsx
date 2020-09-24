@@ -20,15 +20,15 @@ export default function Home() {
             background: 'url("/img/hero.png") no-repeat top right/50%',
           }}
         >
-          <div className="max-w-screen-lg w-full">
-            <div className="w-1/2">
+          <div className="px-8 py-16 sm:max-w-screen-lg sm:w-full">
+            <div className="pr-1/2">
               <h2
-                className="font-bold"
+                className="font-bold leading-tight"
                 style={{ fontSize: "clamp(1.5rem, 6vw, 60px)" }}
               >
                 DeFi for everyone
               </h2>
-              <h3 className="text-lg mb-16">
+              <h3 className="sm:text-lg mt-4 mb-8 sm:mb-16">
                 Sailfish is the gateway to open financial services for you and
                 your friends
               </h3>
@@ -45,17 +45,24 @@ export default function Home() {
       </main>
 
       <section className="h-screen-section flex items-center justify-center relative">
-        <div className="max-w-screen-lg w-full">
-          <h2 className="font-bold text-sf-dark text-6xl">Trade</h2>
-          <div className="text-lg max-w-md text-gray-600">
-            <p className="mt-4">
-              Easily buy and sell tokens on the top exchanges using our
-              aggregated liquidity.
-            </p>
-            <p className="mt-4">Simply connect your wallet to get started.</p>
+        <div className="px-8 w-1/2 sm:max-w-screen-lg sm:w-full">
+          <div className="py-8 sm:pr-1/2">
+            <h2
+              className="font-bold text-sf-dark"
+              style={{ fontSize: "clamp(1.5rem, 6vw, 60px)" }}
+            >
+              Trade
+            </h2>
+            <div className="sm:text-lg max-w-md text-gray-600">
+              <p className="mt-4">
+                Easily buy and sell tokens on the top exchanges using our
+                aggregated liquidity.
+              </p>
+              <p className="mt-4">Simply connect your wallet to get started.</p>
+            </div>
           </div>
         </div>
-        <div className="absolute right-0 mr-24" style={{ width: "45vw" }}>
+        <div className="sm:absolute sm:right-0 w-1/2 w-45vw">
           <div className="relative h-full flex items-center">
             <div
               className="relative mt-8 ml-8"
@@ -67,7 +74,7 @@ export default function Home() {
               <div className="bg-sf-dark-blue absolute w-full h-full" />
             </div>
             <div
-              className="h-full w-full absolute inset-y-0 -ml-8"
+              className="h-full w-full absolute inset-y-0 sm:-ml-8"
               style={{
                 background:
                   'url("/img/section2.png") no-repeat center left /55%',
@@ -95,14 +102,19 @@ export default function Home() {
           }}
         >
           <div
-            className="bg-white px-16 py-32 flex flex-col justify-center"
+            className="bg-white px-8 sm:px-16 py-8 sm:py-32 flex flex-col justify-center"
             style={{
               width: "110%",
               marginLeft: "-10%",
             }}
           >
-            <h2 className="font-bold text-sf-dark text-6xl">Borrow & Lend</h2>
-            <div className="text-lg max-w-md text-gray-600">
+            <h2
+              className="font-bold text-sf-dark"
+              style={{ fontSize: "clamp(1.5rem, 6vw, 60px)" }}
+            >
+              Borrow & Lend
+            </h2>
+            <div className="sm:text-lg max-w-md text-gray-600">
               <p className="mt-4">Access all the products in DeFi.</p>
               <p className="mt-4">
                 Borrow stablecoins for trading, or lend your assets to earn
@@ -114,24 +126,26 @@ export default function Home() {
       </section>
 
       <section className="h-screen-section flex items-center justify-center relative">
-        <div className="max-w-screen-lg w-full">
-          <h2 className="font-bold text-sf-dark text-6xl leading-tight">
-            Chat &
-            <br />
-            Discuss
-          </h2>
-          <div className="text-lg max-w-md text-gray-600">
-            <p className="mt-4">
-              Collaborate with community members, share insights, and learn from
-              each other.
-            </p>
-            <p className="mt-4">Choose what positions or trades to share.</p>
+        <div className="px-8 w-1/2 sm:max-w-screen-lg sm:w-full">
+          <div className="py-8 sm:pr-1/2">
+            <h2
+              className="font-bold text-sf-dark leading-tight"
+              style={{ fontSize: "clamp(1.5rem, 6vw, 60px)" }}
+            >
+              Chat &
+              <br />
+              Discuss
+            </h2>
+            <div className="sm:text-lg max-w-md text-gray-600">
+              <p className="mt-4">
+                Collaborate with community members, share insights, and learn
+                from each other.
+              </p>
+              <p className="mt-4">Choose what positions or trades to share.</p>
+            </div>
           </div>
         </div>
-        <div
-          className="absolute right-0 mr-24 grid grid-cols-3 gap-4"
-          style={{ width: "45vw" }}
-        >
+        <div className="sm:absolute sm:right-0 grid grid-cols-3 gap-4 w-1/2 w-45vw mr-4">
           {Array.from({ length: 6 }, (_, i) => (
             <img
               key={i}
@@ -145,12 +159,12 @@ export default function Home() {
       <footer>
         <img
           src="/img/footer.svg"
-          className="w-full pointer-events-none -mb-1"
+          className="w-full pointer-events-none -mb-1 hidden sm:block"
         />
         <div className="flex flex-col items-center w-full bg-sf-footer-blue py-8 text-white">
-          <div className="w-full max-w-screen-lg">
-            <div className="grid grid-cols-6">
-              <div className="col-span-1">
+          <div className="w-full px-8 sm:max-w-screen-lg">
+            <div className="sm:grid grid-cols-4">
+              <div className="col-span-1 hidden sm:block">
                 <div className="flex items-center">
                   <img
                     className="w-10"
@@ -160,29 +174,57 @@ export default function Home() {
                 </div>
               </div>
               <ul className="col-span-1">
-                <li className="mt-2 mb-4 font-bold text-gray-400">Company</li>
+                <li className="mt-2 sm:mb-4 font-bold text-gray-400">
+                  Company
+                </li>
                 <li className="my-2">
                   <Link href="/about">
-                    <a>About</a>
+                    <a className="group flex items-center justify-between">
+                      About
+                      <FontAwesomeIcon
+                        className="sm:hidden transform group-hover:-translate-x-2 transition-all duration-100"
+                        icon={["fas", "angle-right"]}
+                        size="1x"
+                        fixedWidth
+                      />
+                    </a>
                   </Link>
                 </li>
               </ul>
-              <ul className="col-span-4">
-                <li className="mt-2 mb-4 font-bold text-gray-400">Sailfish</li>
+              <ul className="col-span-2">
+                <li className="mt-2 sm:mb-4 font-bold text-gray-400">
+                  Platform
+                </li>
                 <li className="my-2">
                   <Link href="/faq">
-                    <a>FAQ</a>
+                    <a className="group flex items-center justify-between">
+                      FAQ
+                      <FontAwesomeIcon
+                        className="sm:hidden transform group-hover:-translate-x-2 transition-all duration-100"
+                        icon={["fas", "angle-right"]}
+                        size="1x"
+                        fixedWidth
+                      />
+                    </a>
                   </Link>
                 </li>
                 <li className="my-2">
                   <Link href="https://docs.sailfish.app/">
-                    <a>Docs</a>
+                    <a className="group flex items-center justify-between">
+                      Docs
+                      <FontAwesomeIcon
+                        className="sm:hidden transform group-hover:-translate-x-2 transition-all duration-100"
+                        icon={["fas", "angle-right"]}
+                        size="1x"
+                        fixedWidth
+                      />
+                    </a>
                   </Link>
                 </li>
               </ul>
             </div>
-            <div className="mt-16 flex items-center justify-between border-t border-gray-400 pt-8">
-              <div>
+            <div className="mt-16 sm:flex items-center justify-between border-t border-gray-400 pt-8">
+              <div className="text-center">
                 <a
                   target="_blank"
                   href="https://twitter.com/Sailfishapp"
@@ -228,9 +270,9 @@ export default function Home() {
                   />
                 </a>
               </div>
-              <span className="text-xs mr-2">
+              <div className="text-center text-xs text-gray-400 sm:mr-2 mt-4 sm:mt-0">
                 © {new Date().getFullYear()} Sailfish
-              </span>
+              </div>
             </div>
           </div>
         </div>
