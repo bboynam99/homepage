@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
-import Nav, { APP_URL } from "../components/nav";
+import { APP_URL } from "../components/nav";
 
 export default function Home() {
   return (
@@ -10,8 +10,6 @@ export default function Home() {
         <title>Sailfish</title>
         <link rel="icon" href="/img/sailfish.svg" />
       </Head>
-
-      <Nav />
 
       <main className="h-screen-section bg-gradient-to-br from-sf-purple via-sf-blue to-sf-teal text-white">
         <div
