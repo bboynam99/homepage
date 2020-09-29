@@ -1,21 +1,22 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
-import Link from "next/link";
-import { APP_URL } from "../components/nav";
+import React from "react";
+import Footer from "../components/footer";
+import Nav, { APP_URL } from "../components/nav";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
         <title>Sailfish</title>
-        <link rel="icon" href="/img/sailfish.svg" />
       </Head>
+
+      <Nav />
 
       <main className="h-screen-section bg-gradient-to-br from-sf-purple via-sf-blue to-sf-teal text-white">
         <div
           className="w-full h-full flex flex-col justify-center items-center"
           style={{
-            background: 'url("/img/hero.png") no-repeat top right/50%',
+            background: 'url("/img/index/hero.png") no-repeat top right/50%',
           }}
         >
           <div className="px-8 py-16 sm:max-w-screen-lg sm:w-full">
@@ -24,11 +25,11 @@ export default function Home() {
                 className="font-bold leading-tight"
                 style={{ fontSize: "clamp(1.5rem, 6vw, 60px)" }}
               >
-                DeFi for everyone
+                DeFi for Everyone
               </h2>
               <h3 className="sm:text-lg mt-4 mb-8 sm:mb-16">
-                Sailfish is the gateway to open financial services for you and
-                your friends
+                Sailfish is the gateway to open financial services on the
+                DFINITY Internet Computer.
               </h3>
 
               <a
@@ -53,10 +54,9 @@ export default function Home() {
             </h2>
             <div className="sm:text-lg max-w-md text-gray-600">
               <p className="mt-4">
-                Easily buy and sell tokens on the top exchanges using our
-                aggregated liquidity.
+                Easily buy and sell tokens with our automated market maker.
               </p>
-              <p className="mt-4">Simply connect your wallet to get started.</p>
+              <p className="mt-4">Bootstrap liquidity for new markets.</p>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function Home() {
               className="h-full w-full absolute inset-y-0 sm:-ml-8"
               style={{
                 background:
-                  'url("/img/section2.png") no-repeat center left /55%',
+                  'url("/img/index/section2.png") no-repeat center left /55%',
               }}
             />
           </div>
@@ -88,7 +88,7 @@ export default function Home() {
             className="h-full w-full"
             style={{
               background:
-                'url("/img/section3.png") no-repeat center center/62.5%',
+                'url("/img/index/section3.png") no-repeat center center/62.5%',
             }}
           />
         </div>
@@ -96,7 +96,7 @@ export default function Home() {
           className="w-1/2 flex flex-col justify-center"
           style={{
             background:
-              'url("/img/section3_right.png") no-repeat center center',
+              'url("/img/index/section3_right.png") no-repeat center center',
           }}
         >
           <div
@@ -113,10 +113,10 @@ export default function Home() {
               Borrow & Lend
             </h2>
             <div className="sm:text-lg max-w-md text-gray-600">
-              <p className="mt-4">Access all the products in DeFi.</p>
+              <p className="mt-4">Autonomous money markets.</p>
               <p className="mt-4">
-                Borrow stablecoins for trading, or lend your assets to earn
-                passive income.
+                Earn passive income on your assets. Borrow from the aggregated
+                lending pool.
               </p>
             </div>
           </div>
@@ -135,11 +135,11 @@ export default function Home() {
               Discuss
             </h2>
             <div className="sm:text-lg max-w-md text-gray-600">
+              <p className="mt-4">Trade with your friends.</p>
               <p className="mt-4">
                 Collaborate with community members, share insights, and learn
                 from each other.
               </p>
-              <p className="mt-4">Choose what positions or trades to share.</p>
             </div>
           </div>
         </div>
@@ -148,133 +148,13 @@ export default function Home() {
             <img
               key={i}
               className="pointer-events-none"
-              src={`/img/grid${i + 1}.png`}
+              src={`/img/index/grid${i + 1}.png`}
             />
           ))}
         </div>
       </section>
 
-      <footer>
-        <img
-          src="/img/footer.svg"
-          className="w-full pointer-events-none -mb-1 hidden sm:block"
-        />
-        <div className="flex flex-col items-center w-full bg-sf-footer-blue py-8 text-white">
-          <div className="w-full px-8 sm:max-w-screen-lg">
-            <div className="sm:grid grid-cols-4">
-              <div className="col-span-1 hidden sm:block">
-                <div className="flex items-center">
-                  <img
-                    className="w-10"
-                    src="/img/sailfish.svg"
-                    alt="Sailfish"
-                  ></img>
-                </div>
-              </div>
-              <ul className="col-span-1">
-                <li className="mt-2 sm:mb-4 font-bold text-gray-400">
-                  Company
-                </li>
-                <li className="my-2">
-                  <Link href="/about">
-                    <a className="group flex items-center justify-between">
-                      About
-                      <FontAwesomeIcon
-                        className="sm:hidden transform group-hover:-translate-x-2 transition-all duration-100"
-                        icon={["fas", "angle-right"]}
-                        size="1x"
-                        fixedWidth
-                      />
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-              <ul className="col-span-2">
-                <li className="mt-2 sm:mb-4 font-bold text-gray-400">
-                  Platform
-                </li>
-                <li className="my-2">
-                  <Link href="/faq">
-                    <a className="group flex items-center justify-between">
-                      FAQ
-                      <FontAwesomeIcon
-                        className="sm:hidden transform group-hover:-translate-x-2 transition-all duration-100"
-                        icon={["fas", "angle-right"]}
-                        size="1x"
-                        fixedWidth
-                      />
-                    </a>
-                  </Link>
-                </li>
-                <li className="my-2">
-                  <Link href="https://docs.sailfish.app/">
-                    <a className="group flex items-center justify-between">
-                      Docs
-                      <FontAwesomeIcon
-                        className="sm:hidden transform group-hover:-translate-x-2 transition-all duration-100"
-                        icon={["fas", "angle-right"]}
-                        size="1x"
-                        fixedWidth
-                      />
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="mt-16 sm:flex items-center justify-between border-t border-gray-400 pt-8">
-              <div className="text-center">
-                <a
-                  target="_blank"
-                  href="https://twitter.com/Sailfishapp"
-                  className="mr-2"
-                >
-                  <FontAwesomeIcon
-                    icon={["fab", "twitter"]}
-                    size="1x"
-                    fixedWidth
-                  />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://medium.com/@sailfishapp"
-                  className="mr-2"
-                >
-                  <FontAwesomeIcon
-                    icon={["fab", "medium"]}
-                    size="1x"
-                    fixedWidth
-                  />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://discord.gg/7Wbqucc"
-                  className="mr-2"
-                >
-                  <FontAwesomeIcon
-                    icon={["fab", "discord"]}
-                    size="1x"
-                    fixedWidth
-                  />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://github.com/sailfish-app"
-                  className="mr-2"
-                >
-                  <FontAwesomeIcon
-                    icon={["fab", "github"]}
-                    size="1x"
-                    fixedWidth
-                  />
-                </a>
-              </div>
-              <div className="text-center text-xs text-gray-400 sm:mr-2 mt-4 sm:mt-0">
-                © {new Date().getFullYear()} Sailfish
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -28,6 +28,7 @@ export default class MyDocument extends Document {
         <Head>
           {/* Inject the Segment snippet into the <head> of the document  */}
           <script dangerouslySetInnerHTML={{ __html: this.renderSnippet() }} />
+          <link rel="icon" href="/img/sailfish.svg" />
         </Head>
         <body>
           <Main />

@@ -4,7 +4,13 @@ import { useEffect, useState } from "react";
 
 export const APP_URL = "https://app.sailfish.app";
 
-export default function Nav() {
+export default function Nav({
+  color = "light",
+  className,
+}: {
+  color?: string;
+  className?: string;
+}) {
   const [showBg, setShowBg] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +26,7 @@ export default function Nav() {
     <nav
       className={classnames(
         "fixed w-full flex justify-center z-10 transition-all duration-200",
+        className,
         {
           "py-2": showBg,
           "py-4": !showBg,
@@ -35,7 +42,7 @@ export default function Nav() {
             <a className="flex items-center">
               <img
                 className="h-10"
-                src="/img/sailfish_logo_light.svg"
+                src={`/img/sailfish_logo_${showBg ? "light" : color}.svg`}
                 alt="Sailfish"
               ></img>
             </a>
