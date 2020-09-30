@@ -16,7 +16,7 @@ library.add(faGithub, faTwitter, faDiscord, faMedium, faAngleRight);
 export default function App({ Component, pageProps }) {
   return (
     <Page>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </Page>
   );
 }
